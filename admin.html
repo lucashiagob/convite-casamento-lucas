@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#2e2119">
+  <title>Administração • Lucas & Shayane</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=editorial1">
+</head>
+<body class="admin-body">
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div><span class="kicker">Área restrita</span><h1>Administração do casamento</h1><p>Gerencie convidados, presentes, fotos e os dados salvos do site.</p></div>
+      <a class="btn btn-secondary" href="index.html">Ver convite</a>
+    </header>
+    <section id="loginCard" class="admin-login-card">
+      <h2>Entrar</h2><p>Use a conta de administrador cadastrada.</p>
+      <div id="loginArea">
+        <label>E-mail<input id="email" type="email" autocomplete="email"></label>
+        <label>Senha<input id="password" type="password" autocomplete="current-password"></label>
+        <button id="loginBtn" class="btn btn-primary full" type="button">Entrar</button>
+      </div>
+      <p id="loginMessage" class="form-message" role="status"></p>
+    </section>
+    <section id="adminArea" class="hidden">
+      <div class="admin-toolbar"><div><span class="admin-session-label">Conectado como</span><strong id="loggedEmail"></strong></div><button id="logoutBtn" class="btn btn-secondary" type="button">Sair</button></div>
+      <div class="admin-stats"><article><strong id="guestCount">0</strong><span>Convidados</span></article><article><strong id="giftCount">0</strong><span>Presentes</span></article><article><strong id="photoCount">0</strong><span>Fotos</span></article></div>
+      <div class="admin-grid">
+        <section class="admin-panel"><div class="admin-panel-head"><div><span class="kicker">Convidados</span><h2>Presenças confirmadas</h2></div><button id="refreshGuestsBtn" class="admin-small-btn" type="button">Atualizar</button></div><div id="adminGuests" class="admin-list"></div></section>
+        <section class="admin-panel"><div class="admin-panel-head"><div><span class="kicker">Presentes</span><h2>Status da lista</h2></div><button id="refreshGiftsBtn" class="admin-small-btn" type="button">Atualizar</button></div><p class="admin-help">Use “Disponível novamente” para liberar um presente comprado ou reservado.</p><div id="adminGifts" class="admin-list"></div></section>
+        <section class="admin-panel admin-panel-wide"><div class="admin-panel-head"><div><span class="kicker">Fotos</span><h2>Carrossel do convite</h2></div></div><div class="upload-box"><label>Adicionar fotos<input id="photoFiles" type="file" accept="image/jpeg,image/png,image/webp" multiple></label><label>Legenda/descrição <span class="optional">(opcional)</span><input id="photoAlt" type="text" placeholder="Ex.: Nosso noivado"></label><button id="uploadBtn" class="btn btn-primary" type="button">Enviar fotos</button></div><div id="adminPhotos" class="admin-photos"></div></section>
+        <section class="admin-panel admin-panel-wide danger-panel"><span class="kicker">Zona de limpeza</span><h2>Deixar o site limpo</h2><p>Esta opção exclui <strong>todos os convidados confirmados</strong>, <strong>todas as reservas/compras registradas</strong> e <strong>todas as fotos enviadas</strong>. Os presentes cadastrados são mantidos, mas voltam para o status <strong>Disponível</strong>.</p><label>Digite <strong>LIMPAR</strong> para liberar o botão<input id="resetConfirmText" type="text" autocomplete="off" placeholder="LIMPAR"></label><button id="resetSiteBtn" class="btn danger-btn" type="button" disabled>Limpar todos os dados</button></section>
+      </div>
+      <p id="adminMessage" class="admin-global-message" role="status"></p>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script type="module" src="admin.js?v=admin3"></script>
+</body>
+</html>
