@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#4a3427">
+  <title>Lucas & Shayane — 17.04.2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=editorial1">
+</head>
+<body>
+  <div class="texture"></div>
+
+  <div id="openingScreen" class="opening-screen">
+    <div id="envelope" class="editorial-card">
+      <span class="opening-kicker">Você está convidado</span>
+      <h1>Lucas <span>&</span> Shayane</h1>
+      <div class="opening-rule"></div>
+      <p>17 de abril de 2027 · 15h</p>
+      <small>Sítio Varrelinha · Maceió - AL</small>
+      <button id="openInviteBtn" class="seal" type="button" aria-label="Abrir convite">Abrir convite</button>
+    </div>
+    <p class="opening-hint">Toque para entrar</p>
+  </div>
+
+  <audio id="weddingMusic" src="wedding-ambient.wav" loop preload="auto"></audio>
+  <button id="musicToggle" class="music-toggle" type="button" aria-label="Ativar música">
+    <span id="musicIcon">♪</span><span id="musicLabel">Música</span>
+  </button>
+
+  <header class="topbar">
+    <div class="brand">Lucas & Shayane</div>
+    <nav class="topnav">
+      <a href="#contador">Contagem</a>
+      <a href="#historia">Fotos</a>
+      <a href="#confirmar">RSVP</a>
+      <a href="#presentes">Presentes</a>
+    </nav>
+  </header>
+
+  <main id="pageContent" class="page-content is-blurred">
+    <section class="hero reveal">
+      <div class="hero-copy">
+        <span class="eyebrow">Save the date</span>
+        <h1>Lucas <span>&</span> Shayane</h1>
+        <p class="hero-date">17 · 04 · 2027</p>
+        <p class="hero-lead">Uma celebração de amor, fé e gratidão para viver ao lado das pessoas que fazem parte da nossa história.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#confirmar">Confirmar presença</a>
+          <a class="btn btn-secondary" href="#presentes">Lista de presentes</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contador" class="section countdown-section reveal">
+      <div class="section-heading editorial-heading">
+        <span class="kicker">Contagem regressiva</span>
+        <h2>Até o nosso sim</h2>
+      </div>
+      <div class="countdown-grid">
+        <article><strong id="countDays">000</strong><span>Dias</span></article>
+        <article><strong id="countHours">00</strong><span>Horas</span></article>
+        <article><strong id="countMinutes">00</strong><span>Minutos</span></article>
+        <article><strong id="countSeconds">00</strong><span>Segundos</span></article>
+      </div>
+    </section>
+
+    <section class="venue-photo-section reveal" aria-label="Prévia do espaço da cerimônia">
+      <img src="sitio-cerimonia.png" alt="Prévia do espaço da cerimônia no Sítio Varrelinha ao entardecer">
+      <div class="venue-photo-overlay">
+        <span class="kicker">Sítio Varrelinha</span>
+        <h2>O cenário do nosso sim</h2>
+      </div>
+    </section>
+
+    <section class="section info-editorial reveal">
+      <div class="info-column">
+        <span class="kicker">Quando</span>
+        <h3>17 de abril<br>de 2027</h3>
+        <p>15h</p>
+      </div>
+      <div class="info-column">
+        <span class="kicker">Onde</span>
+        <h3>Sítio<br>Varrelinha</h3>
+        <p>Maceió · AL</p>
+        <a class="text-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=S%C3%ADtio%20Varrelinha%2C%20Macei%C3%B3%20-%20AL">Abrir no Maps</a>
+      </div>
+      <div class="info-column dress-code">
+        <span class="kicker">Dress code</span>
+        <h3>Esporte fino</h3>
+        <p>Elegante, leve e confortável para uma celebração ao entardecer.</p>
+      </div>
+    </section>
+
+    <section id="historia" class="section reveal">
+      <div class="section-heading editorial-heading">
+        <span class="kicker">Nossa história</span>
+        <h2>Momentos que nos trouxeram até aqui</h2>
+      </div>
+      <div id="photoLoading" class="photo-loading">Carregando nossas fotos...</div>
+      <div id="carousel" class="carousel hidden">
+        <div class="stage">
+          <img id="carouselImage" alt="Foto de Lucas e Shayane">
+          <div id="carouselCounter" class="counter"></div>
+        </div>
+        <div id="carouselDots" class="dots"></div>
+      </div>
+    </section>
+
+    <section id="confirmar" class="section rsvp-section reveal">
+      <div class="section-heading light editorial-heading">
+        <span class="kicker">RSVP</span>
+        <h2>Confirme sua presença</h2>
+        <p>Ao confirmar, você recebe uma senha exclusiva entre 1 e 130. Guarde-a, pois ela também será usada na lista de presentes.</p>
+      </div>
+      <div class="rsvp-layout">
+        <form id="rsvpForm" class="rsvp-card card-surface-dark">
+          <label>Nome completo<input id="name" type="text" minlength="3" required placeholder="Digite seu nome completo"></label>
+          <label>WhatsApp <span>(opcional)</span><input id="phone" type="tel" placeholder="(82) 99999-9999"></label>
+          <button id="submitBtn" class="btn btn-light full" type="submit">Confirmar presença</button>
+          <p id="formMessage" class="form-message"></p>
+        </form>
+        <div id="ticket" class="ticket hidden card-surface-dark">
+          <span>Sua senha</span><strong id="ticketNumber">—</strong>
+          <p>Guarde este número. Ele identifica sua confirmação.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="presentes" class="section gifts-section reveal">
+      <div class="section-heading editorial-heading">
+        <span class="kicker">Lista de presentes</span>
+        <h2>Um carinho para o nosso novo capítulo</h2>
+        <p>Escolha um presente disponível. Você pode comprar pelo Mercado Livre ou enviar o mesmo valor via PIX Copia e Cola.</p>
+      </div>
+      <div id="giftStatus" class="gift-status">Sincronizando presentes e preços...</div>
+      <div id="giftGrid" class="gift-grid"></div>
+      <div class="pix-note">
+        <span>PIX alternativo</span>
+        <p>Ao escolher “Enviar valor via PIX”, o site gera automaticamente um código PIX Copia e Cola com o valor exato do presente.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="giftModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button id="modalClose" class="modal-close" aria-label="Fechar">×</button>
+      <span class="kicker">Presente selecionado</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalPrice" class="modal-price"></p>
+      <div id="reserveStep">
+        <p class="muted">Para evitar que duas pessoas escolham o mesmo presente, confirme seu nome e a senha do convite.</p>
+        <label>Nome completo<input id="giftGuestName" type="text" placeholder="O mesmo nome usado no RSVP"></label>
+        <label>Senha do convite<input id="giftGuestNumber" type="number" min="1" max="130" placeholder="Ex.: 42"></label>
+        <div class="choice-grid">
+          <button id="chooseMl" class="choice-card" type="button"><strong>Comprar no Mercado Livre</strong><span>Você será encaminhado pelo link de afiliado.</span></button>
+          <button id="choosePix" class="choice-card" type="button"><strong>Enviar valor via PIX</strong><span>Gerar PIX Copia e Cola com o valor atual do produto.</span></button>
+        </div>
+        <p id="reserveMessage" class="form-message"></p>
+      </div>
+      <div id="pixStep" class="hidden pix-step">
+        <p id="pixAmount" class="pix-amount"></p>
+        <label class="pix-copy-label">PIX Copia e Cola<textarea id="pixCopyCode" class="pix-copy-code" rows="5" readonly></textarea></label>
+        <button id="copyPixCode" class="btn btn-secondary full" type="button">Copiar código PIX</button>
+        <p id="copyPixMessage" class="copy-pix-message"></p>
+        <p class="muted">Abra o app do seu banco, escolha PIX Copia e Cola e cole o código. Depois de pagar, confirme abaixo.</p>
+        <button id="confirmPix" class="btn btn-primary full" type="button">Já enviei o PIX</button>
+      </div>
+      <div id="mlStep" class="hidden ml-step">
+        <p>O Mercado Livre foi aberto em outra aba. Quando concluir a compra, volte aqui e confirme.</p>
+        <button id="confirmMl" class="btn btn-primary full" type="button">Já comprei este presente</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><span>Lucas & Shayane</span><span>17 · 04 · 2027</span><small>Com carinho, esperamos você.</small></footer>
+  <script src="app.js?v=editorial1"></script>
+</body>
+</html>
