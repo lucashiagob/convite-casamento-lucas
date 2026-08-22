@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 430" fill="none">
+  <defs>
+    <filter id="shadow" x="-25%" y="-20%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#24140e" flood-opacity=".26"/>
+    </filter>
+    <linearGradient id="satinLeft" x1="30" y1="70" x2="260" y2="205" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3f2118"/>
+      <stop offset=".18" stop-color="#704335"/>
+      <stop offset=".39" stop-color="#b27a67"/>
+      <stop offset=".52" stop-color="#6b3b30"/>
+      <stop offset=".75" stop-color="#3b2019"/>
+      <stop offset="1" stop-color="#7e4a39"/>
+    </linearGradient>
+    <linearGradient id="satinRight" x1="490" y1="62" x2="270" y2="205" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4a281f"/>
+      <stop offset=".2" stop-color="#845342"/>
+      <stop offset=".4" stop-color="#bd8572"/>
+      <stop offset=".56" stop-color="#6a3c30"/>
+      <stop offset=".78" stop-color="#3d211a"/>
+      <stop offset="1" stop-color="#87503e"/>
+    </linearGradient>
+    <linearGradient id="tailLeft" x1="215" y1="175" x2="176" y2="417" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9a6654"/>
+      <stop offset=".2" stop-color="#503026"/>
+      <stop offset=".48" stop-color="#a77361"/>
+      <stop offset=".68" stop-color="#5b3329"/>
+      <stop offset="1" stop-color="#3c211a"/>
+    </linearGradient>
+    <linearGradient id="tailRight" x1="292" y1="176" x2="369" y2="407" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4b2a22"/>
+      <stop offset=".22" stop-color="#a16b59"/>
+      <stop offset=".47" stop-color="#65392e"/>
+      <stop offset=".72" stop-color="#b27a67"/>
+      <stop offset="1" stop-color="#44251d"/>
+    </linearGradient>
+    <radialGradient id="knot" cx="0" cy="0" r="1" gradientTransform="translate(249 158) rotate(48) scale(62 52)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#bd8874"/>
+      <stop offset=".42" stop-color="#865240"/>
+      <stop offset=".75" stop-color="#503027"/>
+      <stop offset="1" stop-color="#321b16"/>
+    </radialGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".45" stop-color="#ffe7df" stop-opacity=".48"/>
+      <stop offset=".6" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#shadow)" stroke-linejoin="round">
+    <path d="M247 157C214 113 169 75 119 67C70 59 30 84 30 124C30 167 76 199 128 196C176 193 215 177 247 157Z" fill="url(#satinLeft)" stroke="#3b211a" stroke-width="3"/>
+    <path d="M274 157C310 112 357 74 409 66C458 59 493 86 490 126C487 168 445 198 394 195C348 192 308 178 274 157Z" fill="url(#satinRight)" stroke="#3a2019" stroke-width="3"/>
+
+    <path d="M242 170C222 205 210 250 207 302L197 399L166 420L172 318C177 257 187 207 213 166Z" fill="url(#tailLeft)" stroke="#3b211a" stroke-width="3"/>
+    <path d="M281 170C306 205 326 247 339 299L366 391L397 407L373 309C358 249 337 202 308 164Z" fill="url(#tailRight)" stroke="#3a2019" stroke-width="3"/>
+
+    <path d="M221 156C226 131 246 120 268 128C291 136 299 158 286 177C272 197 242 197 226 180C220 174 218 165 221 156Z" fill="url(#knot)" stroke="#3a211a" stroke-width="3"/>
+
+    <path d="M54 118C100 95 162 115 219 157C173 133 116 128 54 145" stroke="url(#shine)" stroke-width="11" stroke-linecap="round" opacity=".8"/>
+    <path d="M467 118C424 95 361 115 302 158C353 132 408 128 467 144" stroke="url(#shine)" stroke-width="11" stroke-linecap="round" opacity=".78"/>
+    <path d="M201 202C195 260 190 326 183 390" stroke="#f2c9bb" stroke-opacity=".26" stroke-width="8" stroke-linecap="round"/>
+    <path d="M321 204C338 259 354 322 377 380" stroke="#f2c9bb" stroke-opacity=".24" stroke-width="8" stroke-linecap="round"/>
+    <path d="M239 144C252 136 270 141 279 153" stroke="#f6d5ca" stroke-opacity=".34" stroke-width="7" stroke-linecap="round"/>
+
+    <path d="M166 420L197 399L185 376Z" fill="#2f1914" opacity=".72"/>
+    <path d="M366 391L397 407L376 372Z" fill="#2f1914" opacity=".68"/>
+  </g>
+</svg>
