@@ -9,20 +9,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=editorial1">
+  <link rel="stylesheet" href="opening.css?v=bow1">
 </head>
 <body>
   <div class="texture"></div>
 
-  <div id="openingScreen" class="opening-screen">
-    <div id="envelope" class="editorial-card">
-      <span class="opening-kicker">Você está convidado</span>
-      <h1>Lucas <span>&</span> Shayane</h1>
-      <div class="opening-rule"></div>
-      <p>17 de abril de 2027 · 15h</p>
-      <small>Sítio Varrelinha · Maceió - AL</small>
-      <button id="openInviteBtn" class="seal" type="button" aria-label="Abrir convite">Abrir convite</button>
+  <div id="openingScreen" class="opening-screen bow-opening">
+    <div id="envelope" class="opening-card-wrap">
+      <div id="editorialInvite" class="editorial-card editorial-card-ribbon">
+        <div class="cord-system" aria-hidden="true">
+          <span class="cord cord-left"></span>
+          <span class="cord cord-right"></span>
+        </div>
+
+        <button id="openInviteBtn" class="bow-button" type="button" aria-label="Desatar laço e abrir convite">
+          <span class="bow-loop bow-loop-left"></span>
+          <span class="bow-knot"></span>
+          <span class="bow-loop bow-loop-right"></span>
+          <span class="bow-tail bow-tail-left"></span>
+          <span class="bow-tail bow-tail-right"></span>
+        </button>
+
+        <div class="invite-inner">
+          <span class="opening-kicker">Você está convidado</span>
+          <h1>Lucas <span>&</span> Shayane</h1>
+          <div class="opening-rule"></div>
+          <p>17 de abril de 2027 · 15h</p>
+          <small>Sítio Varrelinha · Maceió - AL</small>
+        </div>
+      </div>
     </div>
-    <p class="opening-hint">Toque para entrar</p>
+    <p class="opening-hint">Puxe o laço ou toque nele para abrir</p>
   </div>
 
   <audio id="weddingMusic" src="wedding-ambient.wav" loop preload="auto"></audio>
@@ -176,6 +193,6 @@
   </div>
 
   <footer class="footer"><span>Lucas & Shayane</span><span>17 · 04 · 2027</span><small>Com carinho, esperamos você.</small></footer>
-  <script src="app.js?v=editorial1"></script>
+  <script src="app.js?v=bow1"></script>
 </body>
 </html>
