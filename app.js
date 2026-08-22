@@ -2,21 +2,62 @@ const WEDDING_TARGET = new Date("2027-04-17T15:00:00-03:00");
 
 function initEnvelopeOpening(){
   const opening = document.querySelector("#openingScreen");
-  const envelope = document.querySelector("#envelope");
+  const card = document.querySelector("#editorialInvite");
   const content = document.querySelector("#pageContent");
   const music = document.querySelector("#weddingMusic");
-  const btn = document.querySelector("#openInviteBtn");
-  const openInvitation = async () => {
-    envelope.classList.add("open");
+  const bow = document.querySelector("#openInviteBtn");
+  if(!opening || !card || !content || !bow) return;
+
+  let opened = false;
+  let startY = null;
+  let dragY = 0;
+
+  const finishOpen = async () => {
+    if(opened) return;
+    opened = true;
+    bow.classList.remove("is-dragging");
+    bow.style.transform = "translateX(-50%)";
+    bow.classList.add("is-untied");
+
+    setTimeout(() => card.classList.add("is-opening"), 150);
     setTimeout(() => {
-      opening.classList.add("is-hidden");
+      card.classList.add("is-open");
       content.classList.remove("is-blurred");
-      sessionStorage.setItem("inviteOpenedV2","1");
-    }, 350);
-    try{music.volume=.22;await music.play();setMusicState(true)}catch{}
+      sessionStorage.setItem("inviteOpenedV3","1");
+    }, 520);
+    setTimeout(() => opening.classList.add("is-hidden"), 1050);
+
+    try{
+      if(music){music.volume=.22;await music.play();setMusicState(true)}
+    }catch{}
   };
-  btn.addEventListener("click", openInvitation);
-  if(sessionStorage.getItem("inviteOpenedV2")==="1"){
+
+  bow.addEventListener("click", finishOpen);
+  bow.addEventListener("pointerdown", e => {
+    if(opened) return;
+    startY = e.clientY;
+    dragY = 0;
+    bow.classList.add("is-dragging");
+    try{bow.setPointerCapture(e.pointerId)}catch{}
+  });
+  bow.addEventListener("pointermove", e => {
+    if(startY === null || opened) return;
+    dragY = Math.max(0, Math.min(72, e.clientY - startY));
+    bow.style.transform = `translate(-50%, ${dragY}px) scale(${1 - dragY/900})`;
+    card.style.transform = `translateY(${dragY*.08}px) rotateX(${dragY*.025}deg)`;
+    if(dragY >= 56) finishOpen();
+  });
+  const release = () => {
+    if(startY === null || opened) return;
+    startY = null;
+    bow.classList.remove("is-dragging");
+    bow.style.transform = "translateX(-50%)";
+    card.style.transform = "";
+  };
+  bow.addEventListener("pointerup", release);
+  bow.addEventListener("pointercancel", release);
+
+  if(sessionStorage.getItem("inviteOpenedV3")==="1"){
     opening.classList.add("is-hidden");
     content.classList.remove("is-blurred");
   }
