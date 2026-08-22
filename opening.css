@@ -4,8 +4,8 @@
 .editorial-card-ribbon{overflow:visible;transform-origin:center top;transition:transform .85s cubic-bezier(.22,.8,.2,1),opacity .7s ease,filter .7s ease,box-shadow .4s ease}
 .invite-inner{position:relative;z-index:2;transition:transform .8s cubic-bezier(.22,.8,.2,1),opacity .55s ease}
 .cord-system{display:none}
-.bow-button{position:absolute;left:50%;top:42px;z-index:6;width:260px;height:220px;transform:translateX(-50%);border:0;background:transparent url("laco-juta.svg") center/contain no-repeat;cursor:grab;touch-action:none;-webkit-tap-highlight-color:transparent;filter:drop-shadow(0 7px 8px rgba(46,33,25,.14));transition:opacity .5s ease,filter .35s ease}
-.bow-button:hover{filter:drop-shadow(0 10px 12px rgba(46,33,25,.2))}.bow-button:active{cursor:grabbing}.bow-button.is-dragging{transition:none}.bow-button.is-untied{opacity:0;filter:blur(1px) drop-shadow(0 16px 20px rgba(46,33,25,.08))}
+.bow-button{position:absolute;left:50%;top:34px;z-index:6;width:286px;height:236px;transform:translateX(-50%);border:0;background:transparent url("laco-cetim.svg") center/contain no-repeat;cursor:grab;touch-action:none;-webkit-tap-highlight-color:transparent;filter:drop-shadow(0 9px 11px rgba(37,20,15,.2)) saturate(1.05);transition:opacity .5s ease,filter .35s ease,transform .35s ease}
+.bow-button:hover{filter:drop-shadow(0 13px 16px rgba(37,20,15,.28)) saturate(1.1);transform:translateX(-50%) scale(1.018)}.bow-button:active{cursor:grabbing}.bow-button.is-dragging{transition:none}.bow-button.is-untied{opacity:0;filter:blur(1.5px) drop-shadow(0 18px 24px rgba(46,33,25,.08));transform:translateX(-50%) scale(.96)}
 .bow-button .bow-loop,.bow-button .bow-knot,.bow-button .bow-tail{display:none!important}
 .editorial-card-ribbon.is-opening{transform:translateY(-12px) rotateX(5deg) scale(.992);box-shadow:0 44px 100px rgba(0,0,0,.32)}.editorial-card-ribbon.is-opening .invite-inner{transform:translateY(-4px)}
 .editorial-card-ribbon.is-open{transform:translateY(-88px) rotateX(10deg) scale(.965);opacity:0;filter:blur(2px)}.editorial-card-ribbon.is-open .invite-inner{transform:translateY(-18px);opacity:.7}
@@ -15,5 +15,5 @@
 .stage{aspect-ratio:4/5;max-width:760px;margin-inline:auto}.stage img{transition:opacity .9s ease,transform 6s ease}.stage img:not(.fade){transform:scale(1.015)}
 .btn{min-height:46px;padding:12px 21px;border-width:1px;letter-spacing:.16em;font-weight:500;transition:transform .3s ease,background .3s ease,color .3s ease,box-shadow .3s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(74,52,39,.08)}
 .gift-card,.choice-card,.rsvp-card,.ticket,.admin-panel,.admin-login-card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}.gift-card:hover,.choice-card:hover{transform:translateY(-4px);box-shadow:0 18px 35px rgba(47,33,25,.08)}
-@media(max-width:620px){.editorial-card-ribbon{min-height:560px;padding:110px 26px 48px}.bow-button{top:34px;width:235px;height:205px}.opening-hint{bottom:3.2%;width:100%;padding:0 20px;text-align:center}.stage{aspect-ratio:3/4}.hero h1{font-size:clamp(4.2rem,19vw,6.4rem)}}
+@media(max-width:620px){.editorial-card-ribbon{min-height:560px;padding:110px 26px 48px}.bow-button{top:28px;width:258px;height:220px}.opening-hint{bottom:3.2%;width:100%;padding:0 20px;text-align:center}.stage{aspect-ratio:3/4}.hero h1{font-size:clamp(4.2rem,19vw,6.4rem)}}
 @media(prefers-reduced-motion:reduce){.bow-button,.editorial-card-ribbon,.invite-inner,.page-content,.reveal,.stage img,.opening-hint{transition-duration:.01ms!important;animation:none!important}}
