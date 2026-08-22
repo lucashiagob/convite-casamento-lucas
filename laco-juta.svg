@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 430" fill="none">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#3b281c" flood-opacity=".18"/>
+    </filter>
+    <linearGradient id="rope" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#d2aa78"/><stop offset=".28" stop-color="#a97a4d"/><stop offset=".55" stop-color="#e1bd8a"/><stop offset=".82" stop-color="#8d603a"/><stop offset="1" stop-color="#c99d68"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#shadow)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M254 154C190 80 93 50 47 101C6 147 42 218 104 217C166 216 206 185 254 154Z" stroke="url(#rope)" stroke-width="13"/>
+    <path d="M266 154C326 83 430 43 474 94C516 143 482 211 422 214C357 217 315 184 266 154Z" stroke="url(#rope)" stroke-width="13"/>
+    <path d="M257 162C232 212 222 273 214 337C211 360 206 384 196 404" stroke="url(#rope)" stroke-width="13"/>
+    <path d="M267 163C292 210 312 262 330 318C338 344 345 368 354 385" stroke="url(#rope)" stroke-width="13"/>
+    <path d="M246 158C251 143 273 140 281 155C286 170 273 184 258 180C247 177 242 168 246 158Z" fill="#b38252" stroke="#8d603a" stroke-width="4"/>
+    <path d="M188 404c8 7 18 8 26 1M345 385c8 8 17 9 25 3" stroke="#8d603a" stroke-width="6"/>
+    <g opacity=".72" stroke="#efd0a3" stroke-width="2.5">
+      <path d="M52 101C96 143 137 169 204 174M315 166C373 134 421 106 470 95M220 229L201 370M299 232L348 364"/>
+    </g>
+    <g opacity=".6" stroke="#6e472d" stroke-width="2.2" stroke-dasharray="2 8">
+      <path d="M49 103C102 83 174 113 250 155M270 154C343 108 426 69 472 96M257 170C235 240 220 321 198 400M271 170C304 235 324 309 355 382"/>
+    </g>
+  </g>
+</svg>
